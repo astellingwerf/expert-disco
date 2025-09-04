@@ -9,7 +9,7 @@
         "# renovate: (?<depName>[^\\n]+)\\n\\s+[-]\\s+([\"'])?(?<currentValue>[^\\n\"']+)"
       ],
       "datasourceTemplate": "docker"
-    },
+    }
   ],
   "enabledManagers": ["custom.regex"]
 }
