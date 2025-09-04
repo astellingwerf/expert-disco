@@ -1,5 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranchPatterns": ["branch-1"],
-  "useBaseBranchConfig": "merge"
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "(?<depName>[^\\s:]+):(\\n\\s*[-]\\s+([\"'])?(?<currentValue>([\\w.-]*\\d[\\w.-]*))(\\s*['\"])?)+",
+        "# renovate: (?<depName>[^\\n]+)\\n\\s+[-]\\s+([\"'])?(?<currentValue>[^\\n\"']+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+  },
+  "enabledManagers": ["custom.regex"]
 }
