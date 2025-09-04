@@ -10,6 +10,8 @@
       "datasourceTemplate": "docker"
     }
   ],
-  "enabledManagers": ["custom.regex"],
+  "enabledManagers": [
+    "custom.regex"
+  ],
   "configMigration": true
 }
