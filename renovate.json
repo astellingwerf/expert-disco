@@ -3,7 +3,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["/^Dockerfile$/"],
+      "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
         "(?<depName>[^\\s:]+):(\\n\\s*[-]\\s+([\"'])?(?<currentValue>([\\w.-]*\\d[\\w.-]*))(\\s*['\"])?)+",
         "# renovate: (?<depName>[^\\n]+)\\n\\s+[-]\\s+([\"'])?(?<currentValue>[^\\n\"']+)"
