@@ -5,11 +5,11 @@
       "customType": "regex",
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": [
-        "(?<depName>[^\\s:]+):(\\n\\s*[-]\\s+([\"'])?(?<currentValue>([\\w.-]*\\d[\\w.-]*))(\\s*['\"])?)+",
         "# renovate: (?<depName>[^\\n]+)\\n\\s+[-]\\s+([\"'])?(?<currentValue>[^\\n\"']+)"
       ],
       "datasourceTemplate": "docker"
     }
   ],
-  "enabledManagers": ["custom.regex"]
+  "enabledManagers": ["custom.regex"],
+  "configMigration": true
 }
